@@ -1,0 +1,24 @@
+команды для запуска проекта 
+
+1) python -m venv venv
+
+2) venv\Scripts\activate
+
+3) в .env  добавить данные от PostgreSQL:  DB_USERNAME=*****
+                                           DB_PASSWORD=*****
+                                           DB_HOST=*****
+                                           DB_NAME=*****
+                                           DB_PORT=*****
+
+4) pip install fastapi[all]
+
+4) pip install sqlalchemy alembic psycopg2
+
+5) pip install fastapi-sqlalchemy
+
+6) alembic init migrations
+
+7) далее после миграции во вложении есть 2 файла прошу заменить: alembic.ini  для PostgreSQL и env.py в папке migrations
+
+8) uvicorn main:app --reload  запуск базы.
+
